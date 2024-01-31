@@ -1,0 +1,112 @@
+@import '../../app.scss';
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 2;
+    color: #fff;
+    background: #46079A;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    @include mobile {
+        width: 310px;
+    }
+
+    .links {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+
+
+        a {
+            font-size: 30px;
+            margin: 15px 0;
+
+            @include mobile {
+                font-size: 22px;
+            }
+        }
+    }
+
+}
+
+// .button {
+//     z-index: 2;
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     cursor: pointer;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+// }
+.button {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.burger {
+    width: 100%;
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 40%;
+        margin: auto;
+        // background-color: white;
+        position: relative;
+        transition: transform 0.3s;
+
+    }
+
+    &::after {
+        top: -5px;
+
+    }
+
+
+    &::before {
+        top: 6px;
+
+    }
+
+}
+
+
+
+.burgerActive {
+    &::after {
+        transform: rotate(45deg);
+        top: -1px;
+
+    }
+
+    &::before {
+        transform: rotate(-45deg);
+        top: 1px;
+
+    }
+
+}

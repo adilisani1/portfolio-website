@@ -1,0 +1,146 @@
+@import '../../app.scss';
+
+.navbar {
+    height: 100px;
+    padding: 20px 0;
+
+
+    // &::before {
+    //     width: 1366px;
+    //     content: "";
+    //     height: 2px;
+    //     background-color: orange;
+    //     top: 25px;
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     margin: 0 auto;
+    //     justify-content: center;
+    //     align-items: center;
+    //     display: flex;
+    // }
+
+    // &::after {
+    //     width: 1366px;
+    //     content: "";
+    //     height: 2px;
+    //     background-color: orange;
+    //     top: 25px;
+    //     position: absolute;
+    //     left: -20.5%;
+    //     transform: rotate(90deg);
+    //     margin: 0 auto;
+    //     justify-content: center;
+    //     align-items: center;
+    //     display: flex;
+    // }
+
+
+
+    &::before {
+
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        border-radius: 1948px;
+        background: linear-gradient(180deg, rgba(107, 32, 211, 0.50) 0%, #6B20D3 100%);
+        filter: blur(375px);
+        border-radius: 50%;
+        height: 100vh;
+        width: 90vw;
+        height: calc(100vh - 200px);
+        flex-shrink: 0;
+
+    }
+
+
+    .wrapper {
+        max-width: 1440px;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        position: fixed;
+        // justify-content: space-between;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        .fl {
+            flex: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 100vw;
+            z-index: 1;
+            top: 110%;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include x-large {
+            width: 100%;
+
+            &::before {
+                width: 100%;
+            }
+        }
+
+        .logo {
+            @include mobile {
+                display: none;
+            }
+        }
+
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            @include mobile {
+                padding-right: 10px;
+            }
+
+            a {
+                margin: 0 4px;
+                background-color: rgb(255, 255, 255);
+                color: #111;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                line-height: 46px;
+                margin: 0 5px;
+                border-radius: 50%;
+                background: #fdfdfd;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                @include tablet {
+                    margin: 0 3px;
+                }
+
+                .social-icon {
+                    font-size: 21px;
+                    color: #111;
+                    padding: 3px;
+
+                    @include tablet {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

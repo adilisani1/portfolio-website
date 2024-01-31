@@ -1,0 +1,285 @@
+@import "../../app.scss";
+
+.about {
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    z-index: 1;
+
+
+    .about-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        width: 100%;
+
+        .about-wrapper {
+            height: 100%;
+            display: grid;
+            gap: 30px;
+            width: 100%;
+            padding-top: 170px;
+            grid-template-columns: 1fr 1fr;
+            // flex-wrap: wrap;
+
+            @include mobile {
+                padding-top: 120px;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+                grid-template-columns: 1fr;
+            }
+
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text-container {
+                // flex: 1;
+                width: 80%;
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                .about-me {
+                    position: relative;
+                    margin-bottom: 30px;
+
+                    .about-me-title {
+                        // color: #FFF;
+                        font-family: Mont;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 950;
+                        line-height: normal;
+                        text-transform: uppercase;
+
+                        @include mobile {
+                            font-size: 25px;
+                        }
+                    }
+
+                    .border-bottom {
+                        position: absolute;
+                        left: 0;
+                        bottom: -8px;
+                        width: 70px;
+
+                        @include mobile {
+                            right: 0;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                .about-text {
+                    // color: #FFF;
+                    line-height: 30px;
+                    font-family: Mont Light;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    padding: 0;
+                    margin: 30px 0;
+
+                    @include mobile {
+                        font-size: 13px;
+                        margin: 15px 0;
+                    }
+                }
+
+            }
+
+            .skills-wrapper {
+                // flex: 0 0 auto;
+                // width: 60%;
+
+
+                @include mobile {
+                    // width: 100%;
+
+                }
+
+                .skills {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    @include mobile {
+                        width: 100%;
+                        display: inline-block;
+                    }
+
+                    .items {
+                        padding: 15px 30px 0;
+                        border-radius: 10px;
+                        position: relative;
+                        flex: 1 350px;
+                        margin-left: 10px;
+                        margin-bottom: 20px;
+
+                        .item-data {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+
+                            .icon-img-40 {
+                                width: 70px;
+
+                                img {
+                                    max-width: 100%;
+                                    height: auto;
+                                }
+                            }
+
+                            .mr-30 {
+                                margin-right: 30px;
+                            }
+                        }
+
+                        .skill-progress {
+                            height: 3px;
+                            // background-color: rgba(255, 255, 255, 0.2);
+                            position: relative;
+
+                            .progress {
+                                position: absolute;
+                                height: 100%;
+                                // width: 240px !important;
+                                top: 0;
+                                left: 0;
+                                // background-color: #fff;
+                                -webkit-transition: all 1.5s;
+                                -o-transition: all 1.5s;
+                                transition: all 1.5s;
+                            }
+
+
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+    .certificates {
+        position: relative;
+        // padding: 2rem;
+        // width: 90%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+
+
+        .max-w-6xl {
+            max-width: 90rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include mobile {
+                width: 100%;
+            }
+
+        }
+
+        .inner-carousel {
+
+            .flex {
+                display: inline-flex;
+            }
+
+            .card {
+                width: 350px;
+                background: rgba(211, 211, 211, 0.2);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                pointer-events: none;
+                padding: 30px 20px;
+
+                +.card {
+                    margin-left: 20px;
+                }
+            }
+
+            .rowFlex {
+                display: flex;
+                gap: 60px;
+
+                .c-cards {
+                    padding: 40px;
+                    border-radius: 10px;
+                    height: 100%;
+                    background-color: #232323;
+                    min-width: 27rem;
+
+                    .c-cards-top {
+                        display: flex;
+
+                        .ml-auto {
+                            margin-left: auto;
+                        }
+                    }
+
+                    .c-main-content {
+                        .mb-30 {
+                            margin-bottom: 30px;
+                        }
+
+                        .mt-80 {
+                            margin-top: 80px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .left-btn {
+            position: absolute;
+            left: -10px;
+            top: 45%;
+            color: #fff;
+            z-index: 1;
+            background: rgba(211, 211, 211, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+
+
+        }
+
+        .right-btn {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            /* Ensures the button is aligned to the right edge of its positioned ancestor */
+            top: 70%;
+            color: #fff;
+            z-index: 30;
+            background: rgba(211, 211, 211, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 50px;
+            height: 50px;
+            transition-property: padding;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s;
+            transform: translateX(0%) translateZ(0px);
+        }
+    }
+}

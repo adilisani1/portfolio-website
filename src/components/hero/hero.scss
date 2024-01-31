@@ -1,0 +1,242 @@
+@import '../../app.scss';
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+    z-index: 1;
+
+    .rowItems {
+        max-width: 1440px;
+        margin: 0 auto;
+        width: 100%;
+
+        .wrapper {
+
+            .textContainer {
+                height: 100%;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                padding-top: 225px;
+                padding-left: 12px;
+                padding-right: 12px;
+
+
+                @include mobile {
+                    height: 50%;
+                    gap: 20px;
+                    width: 100%;
+                    padding-top: 50px;
+
+                }
+
+                h2 {
+
+                    font-family: Mont Light;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: uppercase;
+
+                    @include x-large {
+                        font-size: 28px;
+                    }
+
+                    @include mobile {
+                        font-size: 27px;
+                    }
+                }
+
+                h1 {
+
+                    font-family: Mont Bold;
+                    font-size: 45px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: normal;
+
+                    @include x-large {
+                        font-size: 38px;
+                    }
+
+                    @include mobile {
+                        font-size: 28px;
+                    }
+                }
+
+                p {
+
+                    font-family: Mont Light;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 146.023%;
+
+                    /* 35.045px */
+                    @include x-large {
+                        font-size: 16px;
+                    }
+
+                    @include mobile {
+                        font-size: 13px;
+                    }
+                }
+
+                .buttons {
+                    .resume {
+                        width: 200px;
+                        height: 50px;
+                        border-radius: 50px;
+                        font-family: Mont Bold;
+                        font-size: 16px;
+                        cursor: pointer;
+                        margin-right: 20px;
+                        box-shadow: 0px 15px 45px 0px rgba(107, 32, 211, 0.50);
+
+                        @include mobile {
+                            width: 160px;
+                            height: 45px;
+                        }
+                    }
+
+                    .contact {
+                        border-radius: 50px;
+                        mix-blend-mode: lighten;
+                        backdrop-filter: blur(7.5px);
+                        width: 200px;
+                        height: 50px;
+                        border: none;
+                        cursor: pointer;
+                        font-family: Mont Bold;
+
+                    }
+
+
+
+                }
+
+            }
+        }
+    }
+
+    // .imgContainer {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     background-color: rgb(255, 252, 248);
+    //     border-radius: 30% 70% 70% 30% / 39% 27% 73% 61%;
+
+    //     .profile-img {
+    //         width: 650px;
+    //     }
+    // }
+
+    .person {
+        position: absolute;
+        top: 0;
+        right: 180px;
+        border-radius: 50%;
+        z-index: 1;
+
+        @include xx-large {
+            right: 70px;
+        }
+
+
+
+        @include mobile {
+            top: unset;
+            bottom: 0;
+            transform: none;
+            left: 0;
+            right: 0;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+
+        }
+
+        .imgContainer {
+            // background: pink;
+            aspect-ratio: 1 / 1.33;
+            display: grid;
+            align-items: end;
+            border-radius: 0 0 100vw 100vw;
+            overflow: hidden;
+            // border-radius: 60% 40% 70% 30% / 35% 46% 54% 65%;
+
+            @include mobile {
+                // border-radius: 60% 40% 70% 30% / 35% 46% 54% 65%;
+            }
+
+            .circle {
+                width: 100%;
+                z-index: 2;
+                border-radius: 50%;
+                position: absolute;
+                inset: auto 0 0;
+                margin-inline: auto;
+                object-fit: cover;
+                z-index: 2;
+                background: #46079a;
+                aspect-ratio: 1 / 1;
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                // border-radius: 60% 40% 70% 30% / 35% 46% 54% 65%;
+                // background: linear-gradient(180deg, rgba(107, 32, 211, 0.50) 0%, rgba(217, 217, 217, 0.40) 100%);
+
+                @include mobile {
+                    width: 300px;
+                }
+            }
+
+            .profile {
+                width: 500px;
+                // height: 600px;
+                max-width: 100%;
+                // scale: 1.1;
+                object-fit: cover;
+                position: relative;
+                filter: grayscale(40%) drop-shadow(2px 2px 6px #00000085);
+                z-index: 2;
+
+                /* 35.045px */
+                @include x-large {
+                    width: 400px;
+                }
+
+                @include mobile {
+                    width: 300px;
+
+                }
+            }
+
+
+        }
+
+        // &::before {
+        //     bottom: 8px;
+        //     left: -30px;
+        //     position: absolute;
+        //     content: "";
+        //     width: 331px;
+        //     height: 486px;
+        //     border-top-right-radius: 400px;
+        //     border-bottom-right-radius: 400px;
+        //     border: 1px solid rgb(255, 255, 255);
+        //     border-left: 0;
+        //     z-index: -1;
+        //     opacity: 0.1;
+        //     transform: rotate(180deg);
+        // }
+
+    }
+}
